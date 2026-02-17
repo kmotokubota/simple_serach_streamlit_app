@@ -312,6 +312,12 @@ INSERT INTO TRANSACTION VALUES
 create or replace stage bank_db.bank_schema.bank_app_stage directory = (enable = true); --db_nameとschema_name部分は書き換えて利用ください
 ALTER ACCOUNT SET CORTEX_ENABLED_CROSS_REGION = 'ANY_REGION';
 
+-- API連携
+CREATE OR REPLACE API INTEGRATION git_api_integration
+  API_PROVIDER = git_https_api
+  API_ALLOWED_PREFIXES = ('https://github.com/kmotokubota/')
+  ENABLED = TRUE;
+
 -- Git連携
 CREATE OR REPLACE GIT REPOSITORY GIT_INTEGRATION_FOR_HANDSON
   API_INTEGRATION = git_api_integration
