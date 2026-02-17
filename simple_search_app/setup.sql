@@ -315,7 +315,7 @@ ALTER ACCOUNT SET CORTEX_ENABLED_CROSS_REGION = 'ANY_REGION';
 -- Git連携
 CREATE OR REPLACE GIT REPOSITORY GIT_INTEGRATION_FOR_HANDSON
   API_INTEGRATION = git_api_integration
-  ORIGIN = 'https://github.com/kmotokubota/fx_handson.git';
+  ORIGIN = 'https://github.com/kmotokubota/simple_serach_streamlit_app.git';
 
 -- Gitのソースコードを元にStreamlit in Snowflakeの作成
 CREATE OR REPLACE STREAMLIT simple_search_app
